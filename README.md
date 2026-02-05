@@ -15,12 +15,12 @@ The functions included so far are:
         - Takes the radial average of the 2d power spectrum, and displays it as a squashed 1 dimension to more obviously see the different length scale frequencies.
    
 6) highPassFilter(size, center, radius)
-        -
+        - Defines an array which is 1 everywhere, but zero in a central region. The parameters used are the size of the image, the centre, and the radius of the central region.
 7) butterworth(size, center, radius)
-        -
-8) RollingBall(image)
-        -
-9) HistEqualise(image)
-        - 
+        - This has a similar function to the high-pass filter, but does not have harsh edges, which causes the diffraction-looking effect. Instead, there is a gradient between the high and low regions.
+9) RollingBall(image, radius)
+        - Applies a rolling ball correction to an image to remove uneven illumination. The size of the ball is passed in as the radius, and the corrected image is formed by subtracting the background away from the image.
+10) HistEqualise(image)
+        - Reequalises the histogram of the image after the rolling ball, to give better contrast. 
    
    
